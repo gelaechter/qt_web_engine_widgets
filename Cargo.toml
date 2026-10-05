@@ -1,0 +1,39 @@
+[build-dependencies.qt_ritual_build]
+git = "https://github.com/snuk182/ritual.git"
+rev = "7b7cd06018bf7980e14c4478a575269125e2b1d4"
+version = "0.5.0"
+
+[dependencies.cpp_core]
+version = "0.6.0"
+
+[dependencies.qt_core]
+version = "0.5.0"
+
+[dependencies.qt_gui]
+version = "0.5.0"
+
+[dependencies.qt_web_engine]
+git = "https://github.com/gelaechter/qt_web_engine.git"
+rev = "fc4c87a5d81dd24693b7ee3d29f7b08c02f5b89c"
+
+[dependencies.qt_widgets]
+version = "0.5.0"
+
+[features]
+ritual_rustdoc = ["qt_core/ritual_rustdoc", "qt_gui/ritual_rustdoc", "qt_widgets/ritual_rustdoc", "qt_web_engine/ritual_rustdoc"]
+ritual_rustdoc_nightly = ["qt_core/ritual_rustdoc_nightly", "qt_gui/ritual_rustdoc_nightly", "qt_widgets/ritual_rustdoc_nightly", "qt_web_engine/ritual_rustdoc_nightly"]
+
+[package]
+authors = ["Pavel Strakhov <ri@idzaaus.org>"]
+build = "build.rs"
+categories = ["external-ffi-bindings", "gui"]
+description = "Bindings for QtWebEngineWidgets C++ library"
+documentation = "https://docs.rs/qt_web_engine_widgets"
+edition = "2018"
+keywords = ["gui", "ffi", "qt", "ritual"]
+license = "MIT OR Apache-2.0"
+name = "qt_web_engine_widgets"
+repository = "https://github.com/rust-qt/ritual"
+version = "0.5.0"
+[package.metadata.docs.rs]
+features = ["ritual_rustdoc", "ritual_rustdoc_nightly"]
